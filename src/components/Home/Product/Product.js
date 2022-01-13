@@ -4,12 +4,13 @@ import cardImg from "../../../image/item/download.png";
 import cards from "../../../image/item/cash.png";
 import Rating from "react-rating";
 const Product = (props) => {
-  const { title, image, price, description, rating, category } = props.product;
   let quantity = 0;
+  const {id, title, image, price, description, rating, category } = props.product;
+
   for (const product of props.cart) {
-    quantity = product.quantity;
-    console.log(quantity);
+    console.log(product.quantity);
   }
+
   return (
     <div class='product-card'>
       <div class='tooltip'>
@@ -46,7 +47,7 @@ const Product = (props) => {
           ></Rating>
         </div>
       </span>
-      {props.cart.quantity ? (
+      {quantity ? (
         <button
           onClick={() => props.handleAddToCart(props.product)}
           class='card-button'

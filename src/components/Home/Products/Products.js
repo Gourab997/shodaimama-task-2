@@ -19,11 +19,11 @@ const Products = () => {
   useEffect(() => {
     if (products.length) {
       const savedCart = getStoredCart();
-
+      console.log(savedCart);
       const storedCart = [];
       for (const key in savedCart) {
-        const addedProduct = products.filter((product) => product.id == key);
-        console.log(key, addedProduct);
+        const addedProduct = products.find((product) => product?.id == key);
+
         if (addedProduct) {
           const quantity = savedCart[key];
           addedProduct.quantity = quantity;
@@ -52,7 +52,7 @@ const Products = () => {
           handleAddToCart={handleAddToCart}
         ></Product>
       ))}
-      <Header cart={cart}></Header>
+      {cart && <Header cart={cart}></Header>}
     </div>
   );
 };

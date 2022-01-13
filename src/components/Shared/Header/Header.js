@@ -2,21 +2,31 @@ import React from "react";
 import "./Header.css";
 import logo from "../../../image/logo.png";
 import arrow from "../../../image/leftArrow.ec08e6e9.svg";
-import { useState } from "react";
+
 const Header = (props) => {
   const { cart } = props;
   console.log(cart);
   let totalQuantity = 0;
   let total = 0;
-  let currentPrice = 0;
 
   if (cart) {
+    //  console.log(cart);
     for (const product of cart) {
       if (!product.quantity) {
         product.quantity = 1;
       }
+      // for (const p of product) {
+      //   let currentPrice = p.price;
+      //   console.log(currentPrice);
+      // }
+      //  console.log(product);
+      // for (let p in product) {
+      //   // console.log(product[p]?.price, product.quantity);
 
-      total = total + product[0]?.price * product.quantity;
+      //   total = total + product[p]?.price * product.quantity;
+      // }
+      //total = total + p.price * product.quantity;
+      total = total + product.price * product.quantity;
       totalQuantity = totalQuantity + product.quantity;
     }
   }
