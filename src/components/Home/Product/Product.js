@@ -67,7 +67,7 @@ const Product = (props) => {
           </button>
         </div>
       ) : (
-        <div className='cart-handle'>
+        <div className='cart-handle '>
           <button
             onClick={() => props.handleAddToCart(props.product)}
             className='card-button add-cart'
@@ -78,7 +78,7 @@ const Product = (props) => {
             onClick={() => props.handleRemoveToCart(props.product)}
             className='card-button remove-cart'
           >
-            Remove in cart
+            Remove from cart
           </button>
         </div>
       )}
