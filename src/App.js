@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Shared/Header/Header";
 import Footer from "./components/Shared/Footer/Footer";
 import Home from "./components/Home/Home/Home";
-import Sidebar from "./components/Shared/Sidebar/Sidebar";
+
 function App() {
   return (
     <div>

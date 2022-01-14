@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "../../Shared/Sidebar/Sidebar";
 
 import HomeContain from "../HomeContain/HomeContain";
 

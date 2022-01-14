@@ -51,6 +51,7 @@ const Products = () => {
     // remove from local storage (for now)
     deleteFromDb(product.id);
   };
+  console.log(cart);
 
   return (
     <div className='product '>

@@ -11,7 +11,11 @@ const Product = (props) => {
   if (props?.cart) {
     for (const product of props?.cart) {
       if (product.id === id) {
-        quantity = quantity + product?.quantity;
+        if (!product.quantity) {
+          product.quantity = 1;
+        }
+        console.log(product.quantity);
+        quantity = parseInt(quantity) + parseInt(product?.quantity);
       }
     }
   }
@@ -53,7 +57,16 @@ const Product = (props) => {
         </div>
       </span>
 
-      {quantity > 0 ? (
+      {quantity == 0 ? (
+        <div className='cart-button'>
+          <button
+            onClick={() => props.handleAddToCart(props.product)}
+            className='card-button'
+          >
+            Add to Cart
+          </button>
+        </div>
+      ) : (
         <div className='cart-handle'>
           <button
             onClick={() => props.handleAddToCart(props.product)}
@@ -68,29 +81,7 @@ const Product = (props) => {
             Remove in cart
           </button>
         </div>
-      ) : (
-        <div className='cart-button'>
-          <button
-            onClick={() => props.handleAddToCart(props.product)}
-            className='card-button'
-          >
-            Add to Cart
-          </button>
-        </div>
       )}
-
-      {/* <button
-        onClick={() => props.handleAddToCart(props.product)}
-        className='card-button'
-      >
-        Add to Cart
-      </button>
-      <button
-        onClick={() => props.handleRemoveToCart(props.product)}
-        className='card-button'
-      >
-        Remove to Cart
-      </button> */}
     </div>
   );
 };

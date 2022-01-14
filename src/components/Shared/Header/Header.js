@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import logo from "../../../image/logo.png";
-import arrow from "../../../image/leftArrow.ec08e6e9.svg";
+import arrow from "../../../image/arrow.png";
 
 const Header = (props) => {
   const { cart } = props;
