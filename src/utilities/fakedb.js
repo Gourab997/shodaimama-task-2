@@ -22,6 +22,11 @@ const updateDb = (cart) => {
   localStorage.setItem("shopping_cart", JSON.stringify(cart));
 };
 
+//remove single product from cart
+
+
+
+
 const removeFromDb = (id) => {
   const exists = getDb();
   if (!exists) {

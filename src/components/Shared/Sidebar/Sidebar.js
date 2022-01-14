@@ -2,13 +2,13 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div class='sidenav'>
-      <div class='top-side'>
+    <div className='sidenav'>
+      <div className='top-side'>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/home.png'
                 alt=''
               />
@@ -18,10 +18,10 @@ const Sidebar = () => {
           </span>
         </a>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/fresh.c490817a.png'
                 alt=''
               />
@@ -31,10 +31,10 @@ const Sidebar = () => {
           </span>
         </a>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/regular.13e10ad7.png'
                 alt=''
               />
@@ -44,11 +44,11 @@ const Sidebar = () => {
           </span>
         </a>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
-                src='./image/item/categories/preorders2.866c3fa6.png'
+                className='sidebar-img'
+                src='./'
                 alt=''
               />
             </div>
@@ -58,18 +58,18 @@ const Sidebar = () => {
         </a>
       </div>
 
-      <div class='explore'>
-        <h5 class='product-text' style='color: gray'>
-          Explore <span style='color: green'>Shodai</span>
-          <span style='color: orange'>Mama</span>
+      <div className='explore'>
+        <h5 className='product-text' style={{ color: "gray" }}>
+          Explore <span style={{ color: "green" }}>Shodai</span>
+          <span style={{ color: "orange" }}>Mama</span>
         </h5>
       </div>
-      <div class='top-side'>
+      <div className='top-side'>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/home.png'
                 alt=''
               />
@@ -79,10 +79,10 @@ const Sidebar = () => {
           </span>
         </a>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/fresh.c490817a.png'
                 alt=''
               />
@@ -92,10 +92,10 @@ const Sidebar = () => {
           </span>
         </a>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/regular.13e10ad7.png'
                 alt=''
               />
@@ -105,10 +105,10 @@ const Sidebar = () => {
           </span>
         </a>
         <a href='#'>
-          <span class='sidebar-menu'>
-            <div class='sidebar-imgs'>
+          <span className='sidebar-menu'>
+            <div className='sidebar-imgs'>
               <img
-                class='sidebar-img'
+                className='sidebar-img'
                 src='./image/item/categories/preorders2.866c3fa6.png'
                 alt=''
               />

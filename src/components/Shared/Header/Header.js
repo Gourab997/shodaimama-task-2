@@ -15,17 +15,7 @@ const Header = (props) => {
       if (!product.quantity) {
         product.quantity = 1;
       }
-      // for (const p of product) {
-      //   let currentPrice = p.price;
-      //   console.log(currentPrice);
-      // }
-      //  console.log(product);
-      // for (let p in product) {
-      //   // console.log(product[p]?.price, product.quantity);
 
-      //   total = total + product[p]?.price * product.quantity;
-      // }
-      //total = total + p.price * product.quantity;
       total = total + product.price * product.quantity;
       totalQuantity = totalQuantity + product.quantity;
     }
@@ -33,45 +23,45 @@ const Header = (props) => {
 
   return (
     <div>
-      <nav class='top-bar'>
-        <div class='topnav'>
-          <img src={logo} alt='' class='logo' />
-          <div class='link-top'>
+      <nav className='top-bar'>
+        <div className='topnav'>
+          <img src={logo} alt='' className='logo' />
+          <div className='link-top'>
             <a href='#home'>
-              <i class='fas fa-search icons searched'></i>
+              <i className='fas fa-search icons searched'></i>
             </a>
-            <a href='#news' class='select-delivery'>
-              <span class='delivery'>
+            <a href='#news' className='select-delivery'>
+              <span className='delivery'>
                 <i
-                  class='fas fa-map-marker-alt'
+                  className='fas fa-map-marker-alt'
                   style={{ paddingRight: "5px" }}
                 ></i>
                 Select Delivery Location
               </span>
             </a>
-            <a href='#contact' class='select-delivery'>
-              <span class='delivery'>
-                <i class='fas fa-user' style={{ paddingRight: "5px" }}></i> Sign
-                In
+            <a href='#contact' className='select-delivery'>
+              <span className='delivery'>
+                <i className='fas fa-user' style={{ paddingRight: "5px" }}></i>{" "}
+                Sign In
               </span>
             </a>
             <a href='#about'>
               <i
-                class='fas fa-shopping-cart delivery searched'
+                className='fas fa-shopping-cart delivery searched'
                 style={{ paddingTop: "15px" }}
               ></i>
             </a>
             <span>
               <a href=''>
-                <img class='arrow' src={arrow} alt='' />
+                <img className='arrow' src={arrow} alt='' />
               </a>
-              <a class='cart'>
-                <div class='cart-inner'>
+              <a className='cart'>
+                <div className='cart-inner'>
                   <p style={{ color: "white" }}>
-                    <i class='fas fa-clipboard-list'></i> {totalQuantity}
+                    <i className='fas fa-clipboard-list'></i> {totalQuantity}
                   </p>
-                  <hr class='line' />
-                  <p style={{ color: "white" }}>৳ {total}</p>
+                  <hr className='line' />
+                  <p style={{ color: "white" }}>৳ {total.toFixed(2)}</p>
                 </div>
               </a>
             </span>

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import Product from "../Product/Product";
-import { addToDb, getStoredCart } from "../../../utilities/fakedb";
+import {
+  addToDb,
+  getStoredCart,
+  deleteFromDb,
+} from "../../../utilities/fakedb";
 import Header from "../../Shared/Header/Header";
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -41,17 +45,25 @@ const Products = () => {
     // save to local storage (for now)
     addToDb(product.id);
   };
+  const handleRemoveToCart = (product) => {
+    const newCart = cart.filter((cartItem) => cartItem.id !== product.id);
+    setCart(newCart);
+    // remove from local storage (for now)
+    deleteFromDb(product.id);
+  };
 
   return (
-    <div className='product'>
+    <div className='product '>
       {products.map((product) => (
         <Product
           key={product.id}
           product={product}
           cart={cart}
           handleAddToCart={handleAddToCart}
+          handleRemoveToCart={handleRemoveToCart}
         ></Product>
       ))}
+
       {cart && <Header cart={cart}></Header>}
     </div>
   );

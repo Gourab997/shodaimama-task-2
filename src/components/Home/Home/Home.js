@@ -1,13 +1,12 @@
 import React from "react";
 import Sidebar from "../../Shared/Sidebar/Sidebar";
-import Products from "../Products/Products";
-import TopBanner from "../TopBanner/TopBanner";
+
+import HomeContain from "../HomeContain/HomeContain";
 
 const Home = () => {
   return (
     <div>
-      <TopBanner></TopBanner>
-      <Products></Products>
+      <HomeContain></HomeContain>
     </div>
   );
 };

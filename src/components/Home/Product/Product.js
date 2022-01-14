@@ -1,41 +1,46 @@
 import React from "react";
-import fast from "../../../image/item/fast-delivery.86065e4e.png";
-import cardImg from "../../../image/item/download.png";
-import cards from "../../../image/item/cash.png";
+
 import Rating from "react-rating";
+import "./Product.css";
 const Product = (props) => {
   let quantity = 0;
-  const {id, title, image, price, description, rating, category } = props.product;
+  const { id, title, image, price, description, rating, category } =
+    props.product;
 
-  for (const product of props.cart) {
-    console.log(product.quantity);
+  //quantity check for cart
+  if (props?.cart) {
+    for (const product of props?.cart) {
+      if (product.id === id) {
+        quantity = quantity + product?.quantity;
+      }
+    }
   }
 
   return (
-    <div class='product-card'>
-      <div class='tooltip'>
+    <div className='product-card  '>
+      <div className='tooltip'>
         <div></div>
-        <span class='tooltip-text-regular'>{category}</span>
+        <span className='tooltip-text-regular'>{category}</span>
       </div>
-      <div class='product-image-area'>
-        <img class='product-image' src={image} alt='' />
+      <div className='product-image-area'>
+        <img className='product-image' src={image} alt='' />
       </div>
 
-      <h4 class='product-text' style={{ padding: "10px" }}>
+      <h4 className='product-text' style={{ padding: "10px" }}>
         {title.slice(0, 20)}
       </h4>
-      <h6 class='product-text middle-text' style={{ padding: "10px" }}>
+      <h6 className='product-text middle-text' style={{ padding: "10px" }}>
         {description.slice(0, 120)}
       </h6>
-      <h3 class='product-text'>৳ {price}</h3>
+      <h3 className='product-text'>৳ {price}</h3>
 
-      <div class='product-button'>
-        <button class='details-button'>Details</button>
+      <div className='product-button'>
+        <button className='details-button'>Details</button>
         <div></div>
       </div>
-      <span class='delivery'>
-        <div class='delivery-fast'>
-          <i class='fas fa-users' style={{ paddingRight: "5px" }}></i>
+      <span className='delivery'>
+        <div className='delivery-fast'>
+          <i className='fas fa-users' style={{ paddingRight: "5px" }}></i>
           <p>{rating.count}</p>
         </div>
         <div>
@@ -47,21 +52,45 @@ const Product = (props) => {
           ></Rating>
         </div>
       </span>
-      {quantity ? (
-        <button
-          onClick={() => props.handleAddToCart(props.product)}
-          class='card-button'
-        >
-          Add to Cart
-        </button>
+
+      {quantity > 0 ? (
+        <div className='cart-handle'>
+          <button
+            onClick={() => props.handleAddToCart(props.product)}
+            className='card-button add-cart'
+          >
+            {quantity} in Cart
+          </button>
+          <button
+            onClick={() => props.handleRemoveToCart(props.product)}
+            className='card-button remove-cart'
+          >
+            Remove in cart
+          </button>
+        </div>
       ) : (
-        <button
-          onClick={() => props.handleAddToCart(props.product)}
-          class='card-button'
-        >
-          Cart
-        </button>
+        <div className='cart-button'>
+          <button
+            onClick={() => props.handleAddToCart(props.product)}
+            className='card-button'
+          >
+            Add to Cart
+          </button>
+        </div>
       )}
+
+      {/* <button
+        onClick={() => props.handleAddToCart(props.product)}
+        className='card-button'
+      >
+        Add to Cart
+      </button>
+      <button
+        onClick={() => props.handleRemoveToCart(props.product)}
+        className='card-button'
+      >
+        Remove to Cart
+      </button> */}
     </div>
   );
 };

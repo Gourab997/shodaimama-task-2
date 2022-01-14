@@ -1,0 +1,13 @@
+.add-cart {
+  background-color: #fb6801;
+}
+.remove-cart {
+  background-color: #fb0101;
+}
+.cart-handle {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-button {
+  outline: none;
+}

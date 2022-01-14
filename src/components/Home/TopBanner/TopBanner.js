@@ -4,14 +4,14 @@ import top from "../../../image/KI4pOd1640530128412y5em01.jpeg";
 
 const TopBanner = () => {
   return (
-    <div>
+    <div className='top-banner'>
       <div>
-        <img src={top} class='banner-image' alt='' />
+        <img src={top} className='banner-image' alt='' />
       </div>
-      <div class='preorder'>
-        <div class='line-new'></div>
+      <div className='preorder'>
+        <div className='line-new'></div>
 
-        <div class='preorders'>
+        <div className='preorders'>
           <h3>Preorder</h3>
           <p>
             বাজার দরের চেয়ে কম মূল্যে মৌসুমি পণ্য, ঐতিহ্যবাহী খাবার এবং মাসের
@@ -19,12 +19,23 @@ const TopBanner = () => {
           </p>
         </div>
       </div>
-      <div class='card'>
-        <div class='card-image'>
+      <div className='card'>
+        <div className='card-image'>
           <img src={bbq} alt='' />
         </div>
 
-        <p class='card-text'>সদাইমামা বার-বি-কিউ ফেস্ট</p>
+        <p className='card-text'>সদাইমামা বার-বি-কিউ ফেস্ট</p>
+      </div>
+      <div className='preorder'>
+        <div className='line-new'></div>
+
+        <div className='preorders'>
+          <h3>Regular</h3>
+          <p>
+            ২ ঘন্টার মধ্যে জরুরি প্রয়োজনীয় পণ্যসমূহ সরবরাহ করা হয় সকাল ১০টা-রাত
+            ১০টা পর্যন্ত ।
+          </p>
+        </div>
       </div>
     </div>
   );
